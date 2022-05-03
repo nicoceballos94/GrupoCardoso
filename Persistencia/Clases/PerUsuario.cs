@@ -61,7 +61,7 @@ namespace Persistencia.Clases
                     if ((byte[])oReader["FOTO"] != null)
                         image = (byte[])oReader["FOTO"];
                     else
-                        
+                        image = null;
                     U = new Usuario(correo,pass,nombre,permiso,image);
 
                 }
