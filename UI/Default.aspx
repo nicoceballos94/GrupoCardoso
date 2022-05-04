@@ -21,13 +21,13 @@
 
             <div class="mb-md-5 mt-md-4 pb-5">
 
-              <h2 class="fw-bold mb-2 text-uppercase">Login</h2>
+              <h2 class="fw-bold mb-2 ">Iniciar Sesion</h2>
               <p class="text-white-50 mb-5">Ingrese Correo y Contraseña</p>
 
               <div class="form-outline form-white mb-4">
                 <%--<input type="email" id="typeEmailX" class="form-control form-control-lg" placeholder="Correo" />--%>
                   <asp:TextBox ID="txtMail" runat="server" class="form-control form-control-lg" placeholder="Mail"></asp:TextBox>
-                <label class="form-label" for="typeEmailX">Email</label>
+                <label class="form-label" for="typeEmailX"></label>
               </div>
 
               <div class="form-outline form-white mb-4">
@@ -35,7 +35,7 @@
                  <%-- <asp:TextBox ID="TextBox1" runat="server"</asp:TextBox>--%>
                   <asp:TextBox ID="txtPass" runat="server" TextMode="Password" class="form-control form-control-lg" placeholder="Password"></asp:TextBox>
                 <%--<input type="password" id="typePasswordX" class="form-control form-control-lg"   />--%>
-                <label class="form-label" for="typePasswordX">Password</label>
+                <label class="form-label" for="typePasswordX"></label>
               </div>
 
               <p class="small mb-5 pb-lg-2"><a class="text-white-50" href="#!">Forgot password?</a></p>

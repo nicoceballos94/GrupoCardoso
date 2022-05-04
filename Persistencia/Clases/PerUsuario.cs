@@ -61,7 +61,7 @@ namespace Persistencia.Clases
                     if ((byte[])oReader["FOTO"] != null)
                         image = (byte[])oReader["FOTO"];
                     else
-                        image = null;
+                        image = new byte[variable];
                     U = new Usuario(correo,pass,nombre,permiso,image);
 
                 }
@@ -88,11 +88,11 @@ namespace Persistencia.Clases
             SqlCommand oComando = new SqlCommand("AltaUsuario", oConexion);
             oComando.CommandType = CommandType.StoredProcedure;
 
-            SqlParameter correo = new SqlParameter("@pCorreo", U.Correo);
-            SqlParameter pass = new SqlParameter("@pPass", U.Correo);
-            SqlParameter nombre = new SqlParameter("@pNombre", U.Correo);
-            SqlParameter permiso = new SqlParameter("@pPermiso", U.Correo);
-            SqlParameter image = new SqlParameter("@pImage", U.Correo);
+            SqlParameter correo = new SqlParameter("@pMail", U.Correo);
+            SqlParameter pass = new SqlParameter("@pPass", U.Pass);
+            SqlParameter nombre = new SqlParameter("@pNombre", U.Nombre);
+            SqlParameter permiso = new SqlParameter("@pPermiso", U.Permiso);
+            SqlParameter image = new SqlParameter("@pImagen", U.Imagen);
 
             SqlParameter _Retorno = new SqlParameter("@Retorno", SqlDbType.Int);
             _Retorno.Direction = ParameterDirection.ReturnValue;
@@ -102,6 +102,7 @@ namespace Persistencia.Clases
             oComando.Parameters.Add(nombre);
             oComando.Parameters.Add(permiso);
             oComando.Parameters.Add(image);
+            oComando.Parameters.Add(_Retorno);
 
             int oAfectados = -1;
 

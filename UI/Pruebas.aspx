@@ -16,9 +16,27 @@
     <form id="form1" runat="server">
     <div class="auto-style1">
     
-        Funcionamiento correcto<br />
+        Agregar Usuario<br />
         <br />
-        <asp:Image ID="Image1" runat="server" />
+        correo<asp:TextBox ID="txtcorreo" runat="server"></asp:TextBox>
+        <br />
+        password<asp:TextBox ID="txtpass" runat="server"></asp:TextBox>
+        <br />
+        permiso<asp:TextBox ID="txtpermiso" runat="server"></asp:TextBox>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <asp:Image ID="ImgPre" runat="server" Width="200" />
+        <br />
+        nombre<asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+        <br />
+        foto de perfil
+        <asp:FileUpload ID="fuImagen" runat="server" />
+        <asp:Label ID="lblMensaje" runat="server" Text="Label"></asp:Label>
+        <br />
+        <asp:Button ID="btnAgregar" runat="server" OnClick="btnAgregar_Click" Text="Button" />
+        <br />
+        <br />
+        <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+        <br />
         </div>
     </form>
 </body>

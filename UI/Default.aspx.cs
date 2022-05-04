@@ -24,7 +24,12 @@ public partial class _Default : System.Web.UI.Page
             {
                 Usuario u = Fabrica.GetLU().Logueo(txtMail.Text, txtPass.Text);
                 if (u == null)
+                {
                     lblMensaje.Text = "usuario no encontrado";
+                    txtMail.Text = string.Empty;
+                    txtPass.Text = string.Empty;
+                }
+
                 else
                 {
                     Session["Usuario"] = u;
